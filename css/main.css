@@ -5,3 +5,11 @@ li.name > a {
     color: white;
 }
 
+.fb-auth {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.fp-pic {
+    border: 1px black solid;
+}
