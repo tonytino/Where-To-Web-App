@@ -17,3 +17,12 @@ li.name > a {
 .fp-pic {
     border: 1px black solid;
 }
+
+.center-img {
+    display: block;
+    margin: 0 auto;
+}
+
+.event-tile {
+    border: 1px red solid;
+}
