@@ -1,0 +1,7 @@
+li.name > a {
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+    color: white;
+}
+
