@@ -177,6 +177,22 @@
       </div><!-- End inner wrap -->
     </div><!-- End off canvas nav -->
 
+    <!-- Handlebars Templates -->
+    <script id="multi-event-template" type="text/x-handlebars-template">
+      <div class='row'>
+        {{ #each events }}
+          <div class='small-12 medium-6 large-4 columns center event-tile'>
+            <h5 class='text-center'>{{ title }}</h5>
+            <img class='fp-pic center-img' src="{{ image }}" />
+            <div class="row">
+              <div class="columns small-6"><p class="left">{{ location }}</p></div>
+              <div class="columns small-6"><p class="right">{{ date }}</p></div>
+            </div>
+          </div>
+        {{ /each }}
+      </div>
+    </script>
+
     <!-- Libraries [JS] -->
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/foundation.min.js"></script>
