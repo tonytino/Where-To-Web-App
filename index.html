@@ -97,7 +97,7 @@
             </div>
           </div>
 
-          <hr>
+          <!-- <hr>
 
           <h1 class="text-center">Multi-Event View</h1>
 
@@ -162,23 +162,7 @@
               <img class='fp-pic center-img' src='http://www.officialpsds.com/images/stocks/Concert-stock3112-large.png' />
               <div class="row"><div class="columns small-6"><p class="left">Sunnyvale, CA</p></div><div class="columns small-6"><p class="right">July 1, 2015</p></div></div>
             </div>
-          </div>
-
-          <h1 class="text-center">Single-Event View</h1>
-          <div class='row'>
-            <div class='small-12 large-12 columns'>
-              <img class='center-img se-img' src='http://www.officialpsds.com/images/stocks/Concert-stock3112-large.png' />
-            </div>
-          </div>
-        <div class='row'>
-          <div class="small-6 large-6 text-left columns">
-            <a href="#" class="button">Love it!</a>
-          </div>
-          <div class="small-6 large-6 text-right columns">
-             <a href="#" class="button">Hate it!</a>
-          </div>
-        </div>
-      </div>
+          </div> -->
 
         <!-- Page Footer -->
         <div class="row">
@@ -208,6 +192,28 @@
       </div>
     </script>
 
+    <script id="single-event-template" type="text/x-handlebars-template">
+      <div class='row'>
+            <div class='small-12 large-12 columns'>
+              <h3 class='text-center'>{{title}}</h3>
+              <img class='center-img se-img' src={{image}} />
+            </div>
+      </div>
+        <div class="row">
+          <div class="columns small-6"><p class="left">{{location}}</p></div>
+          <div class="columns small-6"><p class="right">{{date}}</p></div>
+        </div>
+        <div class='row'>
+          <div class="small-6 large-6 text-left columns">
+            <a href="#" class="button">Love it!</a>
+          </div>
+          <div class="small-6 large-6 text-right columns">
+             <a href="#" class="button">Hate it!</a>
+          </div>
+        </div>
+      </div>
+    </script>
+
     <!-- Libraries [JS] -->
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/foundation.min.js"></script>
@@ -216,6 +222,7 @@
     <!-- Project [JS] -->
     <script src="js/main.js"></script>
     <script src="js/multi-event.js"></script>
+    <script src="js/single-event.js"></script>
 
     <script>
       $(document).foundation();

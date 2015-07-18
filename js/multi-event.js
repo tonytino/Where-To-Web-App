@@ -32,3 +32,5 @@ var populateMultiEventView = function() {
     $('.container').html(html);
 }
 
+
+
