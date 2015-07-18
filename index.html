@@ -97,7 +97,7 @@
             </div>
           </div>
 
-          <hr>
+          <!-- <hr>
 
           <h1 class="text-center">Multi-Event View</h1>
 
@@ -162,7 +162,7 @@
               <img class='fp-pic center-img' src='http://www.officialpsds.com/images/stocks/Concert-stock3112-large.png' />
               <div class="row"><div class="columns small-6"><p class="left">Sunnyvale, CA</p></div><div class="columns small-6"><p class="right">July 1, 2015</p></div></div>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <!-- Page Footer -->
@@ -180,16 +180,16 @@
     <!-- Handlebars Templates -->
     <script id="multi-event-template" type="text/x-handlebars-template">
       <div class='row'>
-        {{ #each events }}
+        {{#each events}}
           <div class='small-12 medium-6 large-4 columns center event-tile'>
-            <h5 class='text-center'>{{ title }}</h5>
-            <img class='fp-pic center-img' src="{{ image }}" />
+            <h5 class='text-center'>{{title}}</h5>
+            <img class='fp-pic center-img' src="{{image}}" />
             <div class="row">
-              <div class="columns small-6"><p class="left">{{ location }}</p></div>
-              <div class="columns small-6"><p class="right">{{ date }}</p></div>
+              <div class="columns small-6"><p class="left">{{location}}</p></div>
+              <div class="columns small-6"><p class="right">{{date}}</p></div>
             </div>
           </div>
-        {{ /each }}
+        {{/each}}
       </div>
     </script>
 
@@ -199,6 +199,7 @@
     <script src="js/handlebars-v3.0.3.js"></script>
 
     <!-- Project [JS] -->
+    <script src="js/main.js"></script>
     <script src="js/multi-event.js"></script>
 
     <script>
