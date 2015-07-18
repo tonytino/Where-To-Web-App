@@ -1,3 +1,6 @@
+// Base link for ajax calls
+baseURL = 'https://whereto-server.herokuapp.com'
+
 var clearContainer = function() {
     $('.container').empty();
 }
@@ -21,5 +24,13 @@ $("a:contains('Sign')").click(function(event){
 
         clearContainer();
     }
-
 })
+
+// Takes user to Single Page view if Home button is clicked
+$("a:contains('Home')").click(function(event){
+    event.preventDefault();
+    clearContainer();
+    populateSingleEventView();
+})
+
+
