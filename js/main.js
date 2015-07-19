@@ -1,5 +1,5 @@
 // Base link for ajax calls
-baseURL = 'https://whereto-server.herokuapp.com'
+baseURL = 'https://whereto-server.herokuapp.com';
 
 var clearContainer = function() {
     $('.container').empty();
@@ -33,4 +33,21 @@ $("a:contains('Home')").click(function(event){
     populateSingleEventView();
 })
 
-
+// User Login
+$('.container').on('click','.fb-auth', function(event){
+   event.preventDefault();
+   fbAuth().then(function(authData){
+    console.log(authData)
+      var firstName = authData.facebook.cachedUserProfile.first_name;
+      var lastName = authData.facebook.cachedUserProfile.last_name;
+      var email = authData.facebook.email;
+      var picture = authData.facebook.cachedUserProfile.picture.data.url;
+      var userInfo = {
+        first_name: firstName,
+        last_name: lastName,
+        email: email,
+        image: picture
+      }
+      createUser(userInfo);
+    }, { scope: "email" });
+});
