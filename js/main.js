@@ -53,3 +53,13 @@ $('.container').on('click','.fb-auth', function(event){
       createUser(userInfo);
     }, { scope: "email" });
 });
+
+$('.container').on('click', '.no-click', function(e){
+    e.preventDefault();
+    discardEvent();
+  });
+
+$('.container').on('click', '.yes-click', function(e){
+    e.preventDefault();
+    addEvent();
+  });
