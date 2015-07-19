@@ -22,7 +22,7 @@ var createUser = function(obj){
     var user_id = response.user.id.toString();
     $('.container').attr('id', user_id);
     if (response.event != null) {
-      populateSingleEventView();
+      populateSingleEventView(response);
     }
     else {
       console.log('no preferences page yet');

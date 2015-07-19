@@ -1,11 +1,11 @@
-var populateSingleEventView = function() {
+var populateSingleEventView = function(response) {
     var source      = $("#single-event-template").html();
     var template    = Handlebars.compile(source);
     var context     = {
-                        title: "Event Title",
-                        location: "Sunnyvale, CA",
-                        image: "http://www.officialpsds.com/images/stocks/Concert-stock3112-large.png",
-                        date: "July 1, 2015"
+                        title: response.event.title,
+                        location: response.event.venue,
+                        image: response.event.image,
+                        date: response.event.start_time
                       };
     var html        =  template(context);
 

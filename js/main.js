@@ -40,7 +40,9 @@ $('.container').on('click','.fb-auth', function(event){
     console.log(authData)
       var firstName = authData.facebook.cachedUserProfile.first_name;
       var lastName = authData.facebook.cachedUserProfile.last_name;
-      var email = authData.facebook.email;
+
+      // Alex's work around because FB doesn't send back an email address for me
+      var email = 'alexheinen@comcast.net'//authData.facebook.email;
       var picture = authData.facebook.cachedUserProfile.picture.data.url;
       var userInfo = {
         first_name: firstName,
