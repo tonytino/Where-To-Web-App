@@ -2,7 +2,7 @@ var populateSingleEventView = function(response) {
     var source      = $("#single-event-template").html();
     var template    = Handlebars.compile(source);
     var context     = {
-                        title: response.event.title,
+                        title: response.event.name,
                         location: response.event.venue,
                         image: response.event.image,
                         date: response.event.start_time

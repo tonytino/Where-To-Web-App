@@ -194,16 +194,16 @@
 
     <script id="single-event-template" type="text/x-handlebars-template">
       <div class='row'>
-            <div class='small-12 large-12 columns'>
-              <h3 class='text-center'>{{title}}</h3>
-              <img class='center-img se-img' src={{image}} />
-            </div>
+        <div class='small-12 large-12 columns center'>
+          <h3 class='text-center event-title'>{{title}}</h3>
+          <img class='center-img se-img' src={{image}} />
+        <div class="row">
+          <div class="columns large-6 small-6 text-right"><p>{{location}}</p></div>
+          <div class="columns large-6 small-6 text-left"><p>{{date}}</p></div>
+        </div>
+        </div>
       </div>
         <div class="row">
-          <div class="columns small-6"><p class="left">{{location}}</p></div>
-          <div class="columns small-6"><p class="right">{{date}}</p></div>
-        </div>
-        <div class='row'>
           <div class="small-6 large-6 text-right columns">
              <a href="#" class="button round no-click">Hate it!</a>
           </div>

@@ -70,3 +70,7 @@ li.name > a {
     margin-right: auto;
     max-width: initial;
 }
+
+.event-title {
+    font-weight: bold;
+}
