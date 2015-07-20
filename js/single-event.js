@@ -9,13 +9,13 @@ var populateSingleEventView = function(response) {
                       };
     var html        =  template(context);
 
-    $('.container').html(html);
+    $('#container').html(html);
     $('.se-img').attr('id', response.event.id);
     initialize(response.event.venue, response.event.city);
 }
 
 var createWishlist = function(data) {
-  var user_id = $('.container').attr('id')
+  var user_id = $('#container').attr('class')
   var event_id = $('.se-img').attr('id');
   var url = baseURL + '/users/' + user_id + '/events/' + event_id + '/wishlists'
   $.ajax({

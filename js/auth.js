@@ -20,7 +20,7 @@ var createUser = function(obj){
   })
   .done(function(response){
     var user_id = response.user.id.toString();
-    $('.container').attr('id', user_id);
+    $('#container').attr('class', user_id);
     if (response.event != null) {
       populateSingleEventView(response);
     }
