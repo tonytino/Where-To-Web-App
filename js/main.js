@@ -61,12 +61,12 @@ $("a:contains('Preferences')").click(function(events){
     populatePreferencesSelectionView();
 })
 
-$('.container').on('click', '.no-click', function(e){
+$('#container').on('click', '.no-click', function(e){
     e.preventDefault();
     discardEvent();
   });
 
-$('.container').on('click', '.yes-click', function(e){
+$('#container').on('click', '.yes-click', function(e){
     e.preventDefault();
     addEvent();
   });
