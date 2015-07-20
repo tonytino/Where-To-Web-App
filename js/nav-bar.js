@@ -27,3 +27,7 @@ var buildNavBar = function(buttonText) {
     return navBarRow += closeDiv;
 }
 
+var insertNavBar = function(buttonText) {
+    $('#container').prepend(buildNavBar(buttonText));
+    $('#nav-bar').fadeIn('600');
+}
