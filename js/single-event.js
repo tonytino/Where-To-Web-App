@@ -11,6 +11,7 @@ var populateSingleEventView = function(response) {
 
     $('.container').html(html);
     $('.se-img').attr('id', response.event.id);
+    initialize(response.event.venue);
 }
 
 var createWishlist = function(data) {

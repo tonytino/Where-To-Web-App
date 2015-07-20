@@ -37,7 +37,6 @@ $("a:contains('Home')").click(function(event){
 $('.container').on('click','.fb-auth', function(event){
    event.preventDefault();
    fbAuth().then(function(authData){
-    console.log(authData)
       var firstName = authData.facebook.cachedUserProfile.first_name;
       var lastName = authData.facebook.cachedUserProfile.last_name;
 

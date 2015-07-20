@@ -203,14 +203,17 @@
         </div>
         </div>
       </div>
-        <div class="row">
-          <div class="small-6 large-6 text-right columns">
-             <a href="#" class="button round no-click">Hate it!</a>
-          </div>
-          <div class="small-6 large-6 text-left columns">
-            <a href="#" class="button round yes-click">Love it!</a>
-          </div>
+      <div class="row">
+        <div class="small-6 large-6 text-right columns">
+           <a href="#" class="button round no-click">Hate it!</a>
         </div>
+        <div class="small-6 large-6 text-left columns">
+          <a href="#" class="button round yes-click">Love it!</a>
+        </div>
+      </div>
+      </div>
+      <div class="row" id="map-container">
+        <div class"small-12 large-12 columns" id="map-canvas"></div>
       </div>
     </script>
 
@@ -219,12 +222,14 @@
     <script src="js/foundation.min.js"></script>
     <script src="js/handlebars-v3.0.3.js"></script>
     <script src="js/vendor/firebase.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
     <!-- Project [JS] -->
     <script src="js/main.js"></script>
     <script src="js/multi-event.js"></script>
     <script src="js/single-event.js"></script>
     <script src="js/auth.js"></script>
+    <script src="js/google-maps.js"></script>
 
     <script>
       $(document).foundation();
