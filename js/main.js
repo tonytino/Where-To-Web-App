@@ -18,7 +18,7 @@ $("a:contains('Sign')").click(function(event){
 
         clearContainer();
         populateMultiEventView();
-        insertNavBar("Multi");
+        insertViewSelectionBar("Multi");
     } else {
         // fake signed out state
         $("a:contains('Sign')").text('Sign In');

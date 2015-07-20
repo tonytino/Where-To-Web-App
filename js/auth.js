@@ -23,7 +23,7 @@ var createUser = function(obj){
     $('#container').attr('class', user_id);
     if (response.event != null) {
       populateSingleEventView(response);
-      insertNavBar("Single");
+      insertViewSelectionBar("Single");
     }
     else {
       console.log('no preferences page yet');
