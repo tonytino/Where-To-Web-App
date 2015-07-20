@@ -18,6 +18,7 @@ $("a:contains('Sign')").click(function(event){
 
         clearContainer();
         populateMultiEventView();
+        insertNavBar("Multi");
     } else {
         // fake signed out state
         $("a:contains('Sign')").text('Sign In');
@@ -55,7 +56,7 @@ $('#container').on('click','.fb-auth', function(event){
 
 
 // Upon user clicking preferences, populates container with preferences for selection.
-$("a:contains('Preferences')").click(function(events){
+$("a:contains('Preferences')").click(function(event){
     event.preventDefault();
     clearContainer();
     populatePreferencesSelectionView();

@@ -78,6 +78,7 @@ li.name > a {
 
 #submit-preferences-button {
     padding: 0 0.9375rem;
+}
 
 .event-title {
     font-weight: bold;
@@ -93,4 +94,8 @@ li.name > a {
     height: 100%;
     margin-bottom: 2em;
 
+}
+
+.nav-button {
+    width: 75%;
 }
