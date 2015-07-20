@@ -71,10 +71,26 @@ li.name > a {
     max-width: initial;
 }
 
+
 #preferences-selection {
     margin-left: 0em;
 }
 
 #submit-preferences-button {
     padding: 0 0.9375rem;
+
+.event-title {
+    font-weight: bold;
+}
+
+#map-container {
+    height: 30em;
+    width: 40em;
+    margin-bottom: 2em;
+}
+
+#map-canvas {
+    height: 100%;
+    margin-bottom: 2em;
+
 }

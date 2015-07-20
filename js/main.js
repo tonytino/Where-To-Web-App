@@ -37,10 +37,11 @@ $("a:contains('Home')").click(function(event){
 $('#container').on('click','.fb-auth', function(event){
    event.preventDefault();
    fbAuth().then(function(authData){
-    console.log(authData)
       var firstName = authData.facebook.cachedUserProfile.first_name;
       var lastName = authData.facebook.cachedUserProfile.last_name;
-      var email = authData.facebook.email;
+
+      // Alex's work around because FB doesn't send back an email address for me
+      var email = 'alexheinen@comcast.net'//authData.facebook.email;
       var picture = authData.facebook.cachedUserProfile.picture.data.url;
       var userInfo = {
         first_name: firstName,
@@ -52,9 +53,21 @@ $('#container').on('click','.fb-auth', function(event){
     }, { scope: "email" });
 });
 
+
 // Upon user clicking preferences, populates container with preferences for selection.
 $("a:contains('Preferences')").click(function(events){
     event.preventDefault();
     clearContainer();
     populatePreferencesSelectionView();
 })
+
+$('.container').on('click', '.no-click', function(e){
+    e.preventDefault();
+    discardEvent();
+  });
+
+$('.container').on('click', '.yes-click', function(e){
+    e.preventDefault();
+    addEvent();
+  });
+
