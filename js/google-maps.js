@@ -38,7 +38,7 @@ var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var map;
 
-function initialize(pin) {
+function initialize(pin, city) {
   directionsDisplay = new google.maps.DirectionsRenderer();
   var mapOptions = {
     zoom:12
@@ -46,7 +46,7 @@ function initialize(pin) {
   map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
   directionsDisplay.setMap(map);
 
-  var address = pin + "San Francisco, CA" // Hardcoding this for now
+  var address = pin + ' ' + city
   var geocoder = new google.maps.Geocoder();
 
    geocoder.geocode({
