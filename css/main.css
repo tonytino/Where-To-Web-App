@@ -70,3 +70,18 @@ li.name > a {
     margin-right: auto;
     max-width: initial;
 }
+
+.event-title {
+    font-weight: bold;
+}
+
+#map-container {
+    height: 30em;
+    width: 40em;
+    margin-bottom: 2em;
+}
+
+#map-canvas {
+    height: 100%;
+    margin-bottom: 2em;
+}
