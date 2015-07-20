@@ -31,3 +31,27 @@ var insertNavBar = function(buttonText) {
     $('#container').prepend(buildNavBar(buttonText));
     $('#nav-bar').fadeIn('600');
 }
+
+// Nav Bar Event Handler
+$('#container').on('click', '.nav-button', function(event){
+    event.preventDefault();
+    var buttonText = $(this).text();
+    console.log(buttonText);
+
+    clearContainer();
+
+    switch(buttonText) {
+        case "Single":
+            populateSingleEventView();
+            break;
+        case "Multi":
+            populateMultiEventView();
+            break;
+        case "Wishlist":
+            populateWishlistView();
+            break;
+    }
+
+    // Row is inserted after the new view is loaded in (fadein)
+    insertNavBar(buttonText);
+})
