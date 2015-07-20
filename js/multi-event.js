@@ -29,7 +29,7 @@ var populateMultiEventView = function() {
                     };
     var html        =  template(context);
 
-    $('.container').html(html);
+    $('#container').html(html);
 }
 
 

@@ -2,7 +2,7 @@
 baseURL = 'https://whereto-server.herokuapp.com';
 
 var clearContainer = function() {
-    $('.container').empty();
+    $('#container').empty();
 }
 
 // Temporary means to fake signing in/out
@@ -34,7 +34,7 @@ $("a:contains('Home')").click(function(event){
 })
 
 // User Login
-$('.container').on('click','.fb-auth', function(event){
+$('#container').on('click','.fb-auth', function(event){
    event.preventDefault();
    fbAuth().then(function(authData){
       var firstName = authData.facebook.cachedUserProfile.first_name;
@@ -53,6 +53,14 @@ $('.container').on('click','.fb-auth', function(event){
     }, { scope: "email" });
 });
 
+
+// Upon user clicking preferences, populates container with preferences for selection.
+$("a:contains('Preferences')").click(function(events){
+    event.preventDefault();
+    clearContainer();
+    populatePreferencesSelectionView();
+})
+
 $('.container').on('click', '.no-click', function(e){
     e.preventDefault();
     discardEvent();
@@ -62,3 +70,4 @@ $('.container').on('click', '.yes-click', function(e){
     e.preventDefault();
     addEvent();
   });
+
